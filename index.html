@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <title>Exchange API</title>
+    
+<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=lUfqqbPUvclsh4tsQYrSN8esiVItGQ6KIvWc7ApL3aI1Y76_Mt1k_ISp6do-aWYCos_bJDL9Aw3l5_qvNyXJsIzJyUmvJin77Q2WL9H1E-FowWfk4Xi-ivLcwedDA2ZPzhC4FbgGbx8DUCoI95Ov4Es9VuxEbcE1BmFIp0L4qMVwsrp6JAm8p2ZgC1j1BAoZhcadJjI6OEVNA2xnlAbricVe28Ns0GWz-DWhBLXy6mWYjdHqUIogUhCfMvuWYSrdbRIl79UwBLb_mLHNpVju5P9AVnk2rqwXhMTzo6U8O52MDYGsI_TDYnHuKeC7X_w0GOAv9iZ0F5_4xACccsrIN6pe9x36G9KjXsrgvpAlIZSZG-k1LhbboDCa1-X9ge_TnHSV29kxKMiyV4QU164q2FgIb0YE5EB98VWinVvYU6wNgp5ohBhIAC8Yc4ao6u95Wrt_8mdBPFSNS0sbr5r7wQVOm8kVzI-MLOSJ8j7bVRrARgVw3UdG9jeuxObtJjm4ytjluEbz4SIsTjxTuUlWzXb03goywsbuIuwJv9uO6ojqln0szbsPnEXIik25S3jMTHS2ZCupQAWOp0JoWNUq3sWDgHq4Y9WVj08NxQzsAQckcZpVOXkJpq84Ln-SMLlpS4MBB4XMpoZ9ScjR_ylWiraj3yb4epoLoFoxKi4l6Lua6GFM9-1X5oj2YuM9KS7wUvh1Z60K41RiEKuA1oCCjPexECbALBry-Htvb27cunzjoXmBqElsGPKyDESuply-rX3zR-JxPplX1xdfoGi5JQ" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9hdHQtYy51ZGVteWNkbi5jb20vMjAxOC0xMC0yNF8xMy00My0yNC1kYWYwNzg1OTY1OTI2NWJlNjVjODRhNzRhOTFiZTUyMi9vcmlnaW5hbC5odG1sP3Jlc3BvbnNlLWNvbnRlbnQtZGlzcG9zaXRpb249YXR0YWNobWVudCUzYiUyMGZpbGVuYW1lJTNkaW5kZXguaHRtbCZFeHBpcmVzPTE2ODcxODQzMjUmU2lnbmF0dXJlPUpQcHRGc2tIbGtSdU1IQ0poU0VMREZTTTZZNn54dnJ0SVRUVU1WZn5ONlpBOUlHbXNuU3BQeXJoS1E5NmV2OGRuN3h-c0cwTVB0ZUZNMEQzdnBYYVJ1OGF6aVZ4Vmp2VndQYk0wMWZPUkFmM1hRaVB2RzlBRGJKMWpBd2FycU9mTzNwdmJORm54R3gwdzhNTDh-Y2ZxVVNuT2o5RThFTUJ2REFyMlpNVjRvOE1OeVFmYnRaUGxobUdiZThRY3lRSHMwZHpxWGZOajlJcFdLS2o1dENzdjB4UmdqYU5zY0d3RU9UVGFicGsyNUE1WnAtZnFOcG00dm1LbFY4fkNrY1JIZjY1ak5BNjlqeGNpU05HSHBHdTRCYmFCWjlhfjdKcm9kc3FmcUU2OG16WGtZOGltRU43UlhCOFJUcX56U1dKc1NXeE9LYzh4eXBtaHRwUHc0S2w3UV9fJktleS1QYWlyLUlkPUFQS0FJVEpWNzdXUzVaVDcyNjJB"/></head>
+<body>
+        <div class="container">
+                <div class="row">
+                    <div class="col s8">
+                        <div id="main" class="card">
+                            <div class="card-content">
+                                <span class="card-title">Exchange API - Currency App</span>
+                                <div class="row">
+                                    <form id="currency-form"></form>
+                                        <div class="input-field col s8">
+                                            <input type="number" name = "amount" id = "amount" placeholder="Miktar">
+                                            
+                                        </div>
+
+                                        <div class="input-field col s8">
+                                                <select id = "firstCurrency">
+                                                  
+                                                    <option selected>USD</option>
+                                                    <option>EUR</option>
+                                                    <option>JPY</option>
+                                                    <option>BGN</option>
+                                                    <option>CZK</option>
+                                                    <option>DKK</option>
+                                                    <option>GBP</option>          
+                                                    <option>HUF</option>
+                                                    <option>PLN</option>
+                                                    <option>RON</option>
+                                                    <option>SEK</option>
+                                                    <option>CHF</option>
+                                                    <option>ISK</option>
+                                                    <option>NOK</option>          
+                                                    <option>HRK</option>
+                                                    <option>RUB</option>
+                                                    <option>TRY</option>
+                                                    <option>AUD</option>
+                                                    <option>BRL</option>          
+                                                    <option>CAD</option>
+                                                    <option>CNY</option>
+                                                    <option>HKD</option>
+                                                    <option>IDR</option>          
+                                                    <option>ILS</option>
+                                                    <option>INR</option>
+                                                    <option>KRW</option>
+                                                    <option>MXN</option>          
+                                                    <option>MYR</option>
+                                                    <option>NZD</option>
+                                                    <option>PHP</option>
+                                                    <option>SGD</option>
+                                                    <option>THB</option>          
+                                                    <option>ZAR</option>
+                                                </select>
+
+                                                <select id = "secondCurrency">
+                                                  
+                                                    <option>USD</option>
+                                                    <option>EUR</option>
+                                                    <option>JPY</option>
+                                                    <option>BGN</option>
+                                                    <option>CZK</option>
+                                                    <option>DKK</option>
+                                                    <option>GBP</option>          
+                                                    <option>HUF</option>
+                                                    <option>PLN</option>
+                                                    <option>RON</option>
+                                                    <option>SEK</option>
+                                                    <option>CHF</option>
+                                                    <option>ISK</option>
+                                                    <option>NOK</option>          
+                                                    <option>HRK</option>
+                                                    <option>RUB</option>
+                                                    <option selected>TRY</option>
+                                                    <option>AUD</option>
+                                                    <option>BRL</option>          
+                                                    <option>CAD</option>
+                                                    <option>CNY</option>
+                                                    <option>HKD</option>
+                                                    <option>IDR</option>          
+                                                    <option>ILS</option>
+                                                    <option>INR</option>
+                                                    <option>KRW</option>
+                                                    <option>MXN</option>          
+                                                    <option>MYR</option>
+                                                    <option>NZD</option>
+                                                    <option>PHP</option>
+                                                    <option>SGD</option>
+                                                    <option>THB</option>          
+                                                    <option>ZAR</option>
+                                                </select>
+                                                
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                              
+                              <span class="card-title" id = "outputFirst">USD</span>
+                              <span>-</span>
+                              <span class="card-title" id = "outputSecond">TRY</span>
+                              
+                            </div>
+                            <div class="card-content">
+                                <input type="text"  name = "outputResult" id = "outputResult" placeholder = "Sonuç" readonly >
+
+                            </div>
+                          </div>
+                    </div>
+                </div>
+                
+  
+        </div>
+        
+    
+
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var elems = document.querySelectorAll('select');
+                var instances = M.FormSelect.init(elems);
+              });
+    </script>
+
+    <script src="ui.js"></script>
+    <script src="currency.js"></script>
+    <script src="app.js"></script>
+   
+</body>
+</html>
